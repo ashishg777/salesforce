@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Contacts List">
+
+        <template if:true={errors}>
+            <div class="slds-text-color_error slds-p-around_medium">
+                <template for:each={errors} for:item="err">
+                    <p key={err}>{err}</p>
+                </template>
+            </div>
+        </template>
+
+        <template if:true={contactList}>
+            <lightning-datatable
+                key-field="Id"
+                data={contactList}
+                columns={columns}>
+            </lightning-datatable>
+        </template>
+
+    </lightning-card>
+</template>

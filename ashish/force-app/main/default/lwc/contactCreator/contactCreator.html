@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Create New Contact">
+        <div class="slds-p-around_medium">
+
+            <lightning-record-form
+                object-api-name="Contact"
+                fields={fields}
+                onsuccess={handleSuccess}
+                columns="1">
+            </lightning-record-form>
+
+        </div>
+    </lightning-card>
+</template>
